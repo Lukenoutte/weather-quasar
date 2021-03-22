@@ -1,0 +1,54 @@
+<template>
+  <div class="q-pa-xl flex align-center column left-container">
+    <q-input rounded borderless bottom-slots label="Search for places...">
+      <template v-slot:prepend>
+        <q-icon name="search" />
+      </template>
+      <template v-slot:append>
+        <q-icon name="close" @click="text = ''" class="cursor-pointer" />
+      </template>
+    </q-input>
+
+    <q-icon class="icon-temperature" name="light_mode" />
+    <p class="temperature no-margin">21ºc</p>
+    <p style="font-size: 19px;">Monday, 16:00</p>
+    <div class="q-mt-lg flex items-center justify-center city-container">
+      <span>New York, NY, USA </span>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.left-container {
+  width: 30%;
+  height: 100vh;
+
+  .search-input {
+    width: 80%;
+  }
+
+  .temperature {
+    font-size: 70px;
+  }
+
+  .icon-temperature {
+    color: $yellow-sun;
+    font-size: 150px;
+  }
+  .city-container {
+    height: 100px;
+    width: 100%;
+    background: $yellow-sun;
+    border-radius: 15px;
+    font-weight: bold;
+    color: $white;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .left-container {
+    width: 100%;
+    align-items: center;
+  }
+}
+</style>
