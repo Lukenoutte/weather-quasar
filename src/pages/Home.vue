@@ -1,17 +1,25 @@
 <template>
   <q-page>
     <div class="main-container">
-      <left-container/>
-      <div class="q-pa-xl right-container ">two thirds</div>
+      <left-container />
+      <right-container />
     </div>
   </q-page>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "Home",
   components: {
-    LeftContainer: () => import("../components/LeftContainerHome"),
+    LeftContainer: () => import("../components/LeftContainer"),
+    RightContainer: () => import("../components/RightContainer/RightContainer")
+  },
+  methods: {
+    ...mapActions(["getData"])
+  },
+  mounted() {
+    this.$store.dispatch("data/getData");
   }
 };
 </script>
@@ -22,20 +30,10 @@ export default {
   flex-direction: row;
 }
 
-.right-container {
-  width: 70%;
-  height: 100vh;
-  background-color: $background-grey;
-}
-
-@media (max-width: $breakpoint-sm) {
+@media only screen and (max-width: $breakpoint-sm) {
   .main-container {
     display: flex;
     flex-direction: column;
-  }
-
-  .right-container {
-    width: 100%;
   }
 }
 </style>

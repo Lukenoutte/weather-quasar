@@ -1,6 +1,12 @@
 <template>
-  <div class="q-pa-xl flex align-center column left-container">
-    <q-input rounded borderless bottom-slots label="Search for places...">
+  <div class="q-pa-xl left-container">
+    <q-input
+      rounded
+      borderless
+      bottom-slots
+      class="search-input"
+      label="Search for places..."
+    >
       <template v-slot:prepend>
         <q-icon name="search" />
       </template>
@@ -18,13 +24,21 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "LeftContainer"
+};
+</script>
+
 <style lang="scss" scoped>
 .left-container {
   width: 30%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   .search-input {
-    width: 80%;
+    width: 100%;
   }
 
   .temperature {
@@ -45,10 +59,18 @@
   }
 }
 
-@media (max-width: $breakpoint-sm) {
+@media only screen and (max-width: $breakpoint-sm) {
   .left-container {
     width: 100%;
+    height: auto;
     align-items: center;
+
+    .search-input {
+      width: 80%;
+    }
+    .city-container {
+       width: 80%;
+    }
   }
 }
 </style>
