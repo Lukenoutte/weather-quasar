@@ -2,29 +2,29 @@
   <div class="q-pa-xl right-container">
     <p class="q-my-md title">Semana</p>
     <div class="flex justify-between row week">
-      <day />
-      <day />
-      <day />
-      <day />
-      <day />
-      <day />
-      <day />
+      <day v-for="(day, index) in weekWeather" :key="index" :day="day"/>
     </div>
     <p class="q-my-md title">Hoje</p>
     <div class="flex row justify-between" style="max-width: 850px;">
-      <high-light />
-      <high-light />
-      <high-light />
+      <high-light :title="'Humidade'" />
+      <high-light :title="'Humidade'"/>
+      <high-light :title="'Humidade'"/>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "RihgtContainer",
   components: {
     Day: () => import("./Day"),
     HighLight: () => import("./HighLight")
+  },
+  computed: {
+    ...mapGetters({
+      weekWeather: "data/weekWeather"
+    })
   }
 };
 </script>

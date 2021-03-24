@@ -8,19 +8,13 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+
 export default {
   name: "Home",
   components: {
     LeftContainer: () => import("../components/LeftContainer"),
     RightContainer: () => import("../components/RightContainer/RightContainer")
   },
-  methods: {
-    ...mapActions(["getData"])
-  },
-  mounted() {
-    this.$store.dispatch("data/getData");
-  }
 };
 </script>
 

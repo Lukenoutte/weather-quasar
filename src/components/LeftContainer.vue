@@ -5,7 +5,7 @@
       borderless
       bottom-slots
       class="search-input"
-      label="Search for places..."
+      label="Procurar outra cidade..."
     >
       <template v-slot:prepend>
         <q-icon name="search" />
@@ -15,25 +15,40 @@
       </template>
     </q-input>
 
-    <q-icon class="icon-temperature" name="light_mode" />
-    <p class="temperature no-margin">21ºc</p>
-    <p style="font-size: 19px;">Monday, 16:00</p>
+    <img class="icon-temperature" :src="icons[condition]" />
+    <p class="temperature no-margin">{{ temperature }}ºc</p>
+    <p style="font-size: 19px;">{{ dateAndTime }}</p>
     <div class="q-mt-lg flex items-center justify-center city-container">
-      <span>New York, NY, USA </span>
+      <span> {{ city }} </span>
     </div>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+import { icons } from "../helpers";
 export default {
-  name: "LeftContainer"
+  name: "LeftContainer",
+  data() {
+    return {
+      icons
+    };
+  },
+  computed: {
+    ...mapGetters({
+      city: "data/city",
+      temperature: "data/temperature",
+      dateAndTime: "data/dateAndTime",
+      condition: "data/condition"
+    })
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .left-container {
   width: 30%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 
@@ -46,8 +61,7 @@ export default {
   }
 
   .icon-temperature {
-    color: $yellow-sun;
-    font-size: 150px;
+    height: 180px;
   }
   .city-container {
     height: 100px;
@@ -55,6 +69,7 @@ export default {
     background: $yellow-sun;
     border-radius: 15px;
     font-weight: bold;
+    font-size: 17px;
     color: $white;
   }
 }
@@ -62,14 +77,13 @@ export default {
 @media only screen and (max-width: $breakpoint-sm) {
   .left-container {
     width: 100%;
-    height: auto;
     align-items: center;
 
     .search-input {
       width: 80%;
     }
     .city-container {
-       width: 80%;
+      width: 80%;
     }
   }
 }

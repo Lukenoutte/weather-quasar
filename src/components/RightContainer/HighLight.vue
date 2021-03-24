@@ -1,12 +1,15 @@
 <template>
   <div class="q-pa-lg high-light">
-      <span>Title</span>
+      <span>{{title}}</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HighLight"
+  name: "HighLight",
+  props: {
+    title: { type: String, required: true}
+  }
 };
 </script>
 

@@ -1,23 +1,38 @@
 <template>
   <div class="q-pa-sm  items-center justify-center day">
-    <strong>Seg</strong>
-    <q-icon class="q-my-sm icon-temperature" name="light_mode" />
-    <p>20°c</p>
+    <strong>{{ day.weekday }}</strong>
+    <img class="q-my-sm my-icon" :src="icons[day.condition]" />
+    <span>Max: {{ day.max }}°c</span>
+    <span>Min: {{ day.min }}°c</span>
   </div>
 </template>
 
+<script>
+import { icons } from "../../helpers";
+export default {
+  name: "Day",
+  data() {
+    return {
+      icons
+    };
+  },
+  props: {
+    day: { type: Object, required: true }
+  }
+};
+</script>
+
 <style lang="scss" scoped>
+.my-icon {
+  height: 60px;
+}
 .day {
   background-color: $white;
   border-radius: 15px;
   width: 13%;
-  height: 150px;
+  height: 170px;
   display: flex;
   flex-direction: column;
-}
-
-.icon-temperature{
-    font-size: 40px;
 }
 
 @media only screen and (max-width: $breakpoint-sm) {
