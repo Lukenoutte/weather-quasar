@@ -2,8 +2,8 @@
   <div class="q-pa-sm  items-center justify-center day">
     <strong>{{ day.weekday }}</strong>
     <img class="q-my-sm my-icon" :src="icons[day.condition]" />
-    <span>Max: {{ day.max }}°c</span>
-    <span>Min: {{ day.min }}°c</span>
+    <span> <strong>Max:</strong> {{ day.max }}°c</span>
+    <span><strong>Min:</strong> {{ day.min }}°c</span>
   </div>
 </template>
 

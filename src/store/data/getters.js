@@ -18,3 +18,17 @@ export function condition(state) {
   return state.weatherData.condition_slug;
 }
 
+export function humidity(state) {
+  return state.weatherData.humidity;
+}
+
+export function windySpeedy(state) {
+  return state.weatherData.wind_speedy;
+}
+
+export function sun(state) {
+  return {
+    sunrise: state.weatherData.sunrise,
+    sunset: state.weatherData.sunset
+  };
+}
