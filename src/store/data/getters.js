@@ -1,3 +1,11 @@
+export function recivedData(state) {
+  if (Object.keys(state.weatherData).length > 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 export function city(state) {
   return state.weatherData.city;
 }
@@ -6,8 +14,12 @@ export function temperature(state) {
   return state.weatherData.temp;
 }
 
-export function dateAndTime(state) {
-  return state.weatherData.date + ", " + state.weatherData.time;
+export function date(state) {
+  return state.weatherData.date;
+}
+
+export function time(state) {
+  return state.weatherData.time;
 }
 
 export function weekWeather(state) {
@@ -31,4 +43,8 @@ export function sun(state) {
     sunrise: state.weatherData.sunrise,
     sunset: state.weatherData.sunset
   };
+}
+
+export function description(state) {
+  return state.weatherData.description;
 }

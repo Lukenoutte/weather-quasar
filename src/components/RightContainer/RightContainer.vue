@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .right-container {
   width: 70%;
   min-height: 100vh;

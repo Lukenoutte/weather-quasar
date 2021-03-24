@@ -1,16 +1,16 @@
 <template>
   <div class="flex row justify-between" style="max-width: 850px;">
-    <div class="q-pa-lg high-light">
+    <div class="high-light">
       <span>Humidade</span>
       <p class="data-p">{{ humidity }}%</p>
       <img class="icon" :src="icons['humidity']" />
     </div>
-    <div class="q-pa-lg high-light">
+    <div class="high-light">
       <span>Velocidade do vento</span>
       <p class="data-p">{{ windySpeedy }}</p>
       <img class="icon" :src="icons['wind']" />
     </div>
-    <div class="q-pa-lg high-light sun-container">
+    <div class="high-light sun-container">
       <span>Sol</span>
       <p>Nascer do sol: <strong>{{ sun.sunrise }}</strong></p>
       <p>Pôr do sol: <strong>{{ sun.sunset }}</strong></p>
@@ -41,17 +41,19 @@ export default {
 
 <style lang="scss" scoped>
 .high-light {
-  width: 30%;
+  width: 32%;
   background: $white;
   border-radius: 15px;
   height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 30px 10px;
+
 
   span {
     font-weight: 500;
-    font-size: 17px;
+    font-size: 15px;
     color: $grey-title;
     margin-bottom: 10px;
   }
@@ -65,13 +67,13 @@ export default {
 }
 
 .sun-container p {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 3px;
 }
 
 .sun-container strong {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 @media only screen and (max-width: $breakpoint-sm) {

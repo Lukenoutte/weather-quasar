@@ -17,7 +17,12 @@
 
     <img class="icon-temperature" :src="icons[condition]" />
     <p class="temperature no-margin">{{ temperature }}ºc</p>
-    <p style="font-size: 19px;">{{ dateAndTime }}</p>
+
+    <div class="date-and-time">
+      <span>{{ date }},</span>
+      <span> {{ time }}</span>
+    </div>
+    <span style="font-size:19px; font-weight: 500;">{{ description }}</span>
     <div class="q-mt-lg flex items-center justify-center city-container">
       <span> {{ city }} </span>
     </div>
@@ -38,14 +43,16 @@ export default {
     ...mapGetters({
       city: "data/city",
       temperature: "data/temperature",
-      dateAndTime: "data/dateAndTime",
-      condition: "data/condition"
+      date: "data/date",
+      time: "data/time",
+      condition: "data/condition",
+      description: "data/description"
     })
   }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .left-container {
   width: 30%;
   min-height: 100vh;
@@ -71,6 +78,14 @@ export default {
     font-weight: bold;
     font-size: 17px;
     color: $white;
+  }
+
+  .date-and-time span {
+    font-size: 21px;
+    font-weight: 400;
+  }
+  .date-and-time span:last-child {
+    color: $grey-title;
   }
 }
 

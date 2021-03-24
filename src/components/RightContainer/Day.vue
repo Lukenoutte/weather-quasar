@@ -24,13 +24,13 @@ export default {
 
 <style lang="scss" scoped>
 .my-icon {
-  height: 60px;
+  height: 50px;
 }
 .day {
   background-color: $white;
   border-radius: 15px;
   width: 13%;
-  height: 170px;
+  height: 190px;
   display: flex;
   flex-direction: column;
 }
