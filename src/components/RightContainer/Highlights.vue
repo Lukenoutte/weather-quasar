@@ -1,5 +1,5 @@
 <template>
-  <div class="flex row justify-between" style="max-width: 850px;">
+  <div class="flex row justify-between">
     <div class="high-light">
       <span>Humidade</span>
       <p class="data-p">{{ humidity }}%</p>
@@ -44,21 +44,22 @@ export default {
   width: 32%;
   background: $white;
   border-radius: 15px;
-  height: 250px;
+  height: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 10px;
-
+  justify-content: center;
+  padding: 2% 10px;
+  box-shadow: rgb(0 0 0 / 25%) 0px 1px 2px;
 
   span {
     font-weight: 500;
     font-size: 15px;
     color: $grey-title;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
   .icon {
-    height: 85px;
+    height: 70px;
   }
   .data-p {
     font-size: 30px;
@@ -69,14 +70,14 @@ export default {
 .sun-container p {
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 3px;
+  margin-bottom: 10px;
 }
 
 .sun-container strong {
     font-size: 15px;
 }
 
-@media only screen and (max-width: $breakpoint-sm) {
+@media only screen and (max-width: 1100px) {
   .high-light {
     width: 100%;
     margin-top: 10px;

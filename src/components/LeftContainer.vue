@@ -1,30 +1,32 @@
 <template>
-  <div class="q-pa-xl left-container">
-    <q-input
-      rounded
-      borderless
-      bottom-slots
-      class="search-input"
-      label="Procurar outra cidade..."
-    >
-      <template v-slot:prepend>
-        <q-icon name="search" />
-      </template>
-      <template v-slot:append>
-        <q-icon name="close" @click="text = ''" class="cursor-pointer" />
-      </template>
-    </q-input>
+  <div class="to-centrilize-left">
+    <div class="left-container">
+      <q-input
+        rounded
+        borderless
+        bottom-slots
+        class="search-input"
+        label="Procurar outra cidade..."
+      >
+        <template v-slot:prepend>
+          <q-icon name="search" />
+        </template>
+        <template v-slot:append>
+          <q-icon name="close" @click="text = ''" class="cursor-pointer" />
+        </template>
+      </q-input>
 
-    <img class="icon-temperature" :src="icons[condition]" />
-    <p class="temperature no-margin">{{ temperature }}ºc</p>
+      <img class="icon-temperature" :src="icons[condition]" />
+      <p class="temperature no-margin">{{ temperature }}ºc</p>
 
-    <div class="date-and-time">
-      <span>{{ date }},</span>
-      <span> {{ time }}</span>
-    </div>
-    <span style="font-size:19px; font-weight: 500;">{{ description }}</span>
-    <div class="q-mt-lg flex items-center justify-center city-container">
-      <span> {{ city }} </span>
+      <div class="date-and-time">
+        <span>{{ date }},</span>
+        <span> {{ time }}</span>
+      </div>
+      <span style="font-size:19px; font-weight: 500;">{{ description }}</span>
+      <div class="q-mt-lg flex items-center justify-center city-container">
+        <span> {{ city }} </span>
+      </div>
     </div>
   </div>
 </template>
@@ -52,13 +54,22 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.left-container {
+<style lang="scss" >
+.to-centrilize-left{
   width: 30%;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container {
+  width: 90%;
   display: flex;
   flex-direction: column;
-
+  padding: 1% 3%;
+  max-width: 900px;
   .search-input {
     width: 100%;
   }
@@ -78,6 +89,7 @@ export default {
     font-weight: bold;
     font-size: 17px;
     color: $white;
+    box-shadow: rgb(0 0 0 / 25%) 0px 1px 2px;
   }
 
   .date-and-time span {
@@ -89,9 +101,12 @@ export default {
   }
 }
 
-@media only screen and (max-width: $breakpoint-sm) {
+@media only screen and (max-width: 1100px) {
+  .to-centrilize-left{
+  width: 100%;
+  }
+
   .left-container {
-    width: 100%;
     align-items: center;
 
     .search-input {

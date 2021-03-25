@@ -6,6 +6,7 @@
     </div>
 
     <home-skeleton v-else />
+    <footer />
   </q-page>
 </template>
 
@@ -35,7 +36,7 @@ export default {
   flex-direction: row;
 }
 
-@media only screen and (max-width: $breakpoint-sm) {
+@media only screen and (max-width: 1100px) {
   .main-container {
     display: flex;
     flex-direction: column;
