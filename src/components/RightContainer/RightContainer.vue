@@ -55,7 +55,7 @@ export default {
   }
 
   .right-container {
-    width: 100%;
+    width: 70%;
     height: auto;
     padding-bottom: 100px;
 

@@ -1,21 +1,7 @@
 <template>
   <div class="to-centrilize-left">
     <div class="left-container">
-      <q-input
-        rounded
-        borderless
-        bottom-slots
-        class="search-input"
-        label="Procurar outra cidade..."
-      >
-        <template v-slot:prepend>
-          <q-icon name="search" />
-        </template>
-        <template v-slot:append>
-          <q-icon name="close" @click="text = ''" class="cursor-pointer" />
-        </template>
-      </q-input>
-
+      <input-borderless />
       <img class="icon-temperature" :src="icons[condition]" />
       <p class="temperature no-margin">{{ temperature }}ºc</p>
 
@@ -34,6 +20,8 @@
 <script>
 import { mapGetters } from "vuex";
 import { icons } from "../helpers";
+import InputBorderless from "./InputBorderless";
+
 export default {
   name: "LeftContainer",
   data() {
@@ -50,12 +38,15 @@ export default {
       condition: "data/condition",
       description: "data/description"
     })
+  },
+  components: {
+    InputBorderless
   }
 };
 </script>
 
-<style lang="scss" >
-.to-centrilize-left{
+<style lang="scss">
+.to-centrilize-left {
   width: 30%;
   height: 100vh;
   min-height: 600px;
@@ -70,9 +61,6 @@ export default {
   flex-direction: column;
   padding: 1% 3%;
   max-width: 900px;
-  .search-input {
-    width: 100%;
-  }
 
   .temperature {
     font-size: 70px;
@@ -102,16 +90,13 @@ export default {
 }
 
 @media only screen and (max-width: 1100px) {
-  .to-centrilize-left{
-  width: 100%;
+  .to-centrilize-left {
+    width: 100%;
   }
 
   .left-container {
     align-items: center;
 
-    .search-input {
-      width: 80%;
-    }
     .city-container {
       width: 80%;
     }

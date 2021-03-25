@@ -17,3 +17,9 @@ body {
     overflow: auto; 
   }
 }
+
+@media only screen and (max-height: 800px) {
+  body {
+    overflow: auto; 
+  }
+}
