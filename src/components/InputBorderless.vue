@@ -6,6 +6,7 @@
     class="search-input"
     label="Procurar outra cidade..."
     v-model="searchText"
+    v-on:keyup.enter="getDataFromSearch"
   >
     <template v-slot:prepend>
       <q-icon name="search" />
@@ -34,10 +35,5 @@ export default {
 <style lang="scss" scoped>
 .search-input {
   width: 100%;
-}
-@media only screen and (max-width: 1100px) {
-  .search-input {
-    width: 80%;
-  }
 }
 </style>

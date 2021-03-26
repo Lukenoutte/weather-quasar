@@ -72,7 +72,7 @@ export default {
   .city-container {
     height: 100px;
     width: 100%;
-    background: $yellow-sun;
+    background: $primary;
     border-radius: 15px;
     font-weight: bold;
     font-size: 17px;
