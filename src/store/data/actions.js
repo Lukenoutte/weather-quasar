@@ -1,14 +1,14 @@
 import { axios } from "../../boot/axios";
 
+
 export function getData({ commit }, city) {
   let key = "33d917e3";
-  let url = "https://api.hgbrasil.com/weather?format=json-cors&key=" + key;
-
-
+  let cors = "https://cors-anywhere.herokuapp.com/";
+  let url = cors + "https://api.hgbrasil.com/weather?format=json-cors&key=" + key;
 
   if (city) {
     url = url + "&city_name=" + city;
-  } else {
+  }else{
     url = "https://api.hgbrasil.com/weather?format=json-cors";
   }
 
@@ -18,7 +18,7 @@ export function getData({ commit }, city) {
     })
     .catch(err => {
       if (err) {
-        this.$router.push({ path: "/404" });
+        this.$router.push({ path: '/404' })
       }
     });
 }
