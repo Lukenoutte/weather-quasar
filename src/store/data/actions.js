@@ -9,7 +9,7 @@ export function getData({ commit }, city) {
   if (city) {
     url = url + "&city_name=" + city;
   }else{
-    url = "https://api.hgbrasil.com/weather?format=json-cors";
+    url = cors +  "https://api.hgbrasil.com/weather?format=json-cors";
   }
 
   axios({ baseURL: url })
