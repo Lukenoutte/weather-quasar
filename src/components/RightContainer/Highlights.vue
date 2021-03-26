@@ -12,8 +12,12 @@
     </div>
     <div class="high-light sun-container">
       <span>Sol</span>
-      <p>Nascer do sol: <strong>{{ sun.sunrise }}</strong></p>
-      <p>Pôr do sol: <strong>{{ sun.sunset }}</strong></p>
+      <p>
+        Nascer do sol: <strong>{{ sun.sunrise }}</strong>
+      </p>
+      <p>
+        Pôr do sol: <strong>{{ sun.sunset }}</strong>
+      </p>
       <img class="icon" :src="icons['sun']" />
     </div>
   </div>
@@ -52,6 +56,13 @@ export default {
   padding: 2% 10px;
   box-shadow: rgb(0 0 0 / 25%) 0px 1px 2px;
 
+  &:hover {
+    box-shadow: 1px 1px $grey-title, 2px 2px $grey-title, 3px 3px $grey-title;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    transition: all 0.8s ease 0s;
+  }
+
   span {
     font-weight: 500;
     font-size: 15px;
@@ -74,7 +85,7 @@ export default {
 }
 
 .sun-container strong {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 1100px) {

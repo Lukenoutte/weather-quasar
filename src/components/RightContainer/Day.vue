@@ -34,7 +34,14 @@ export default {
   box-shadow: rgb(0 0 0 / 25%) 0px 1px 2px;
 }
 
-@media only screen and (max-width:  1100px) {
+.day:hover {
+  box-shadow: 1px 1px $grey-title, 2px 2px $grey-title, 3px 3px $grey-title;
+  -webkit-transform: translateX(-3px);
+  transform: translateX(-3px);
+  transition: all 0.8s ease 0s;
+}
+
+@media only screen and (max-width: 1100px) {
   .day {
     width: 100%;
   }

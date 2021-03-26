@@ -6,11 +6,11 @@
       <div style="font-size: 15vh">404 <q-icon name="sick" /></div>
 
       <div class="text-h3" style="opacity:.4">
-        Oops. Something went wrong...
+        Oops. Algo deu errado...
       </div>
       <div class="contact">
-        You can contact
-        <a href="https://github.com/Lukenoutte">Lukenoutte</a>
+        Entre em contrato com
+        <a href="https://github.com/Lukenoutte">Lukenoutte</a> caso precise de ajuda.
       </div>
     </div>
   </div>

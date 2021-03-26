@@ -26,7 +26,7 @@ export default {
   name: "LeftContainer",
   data() {
     return {
-      icons,
+      icons
     };
   },
   computed: {
@@ -75,9 +75,10 @@ export default {
     background: $primary;
     border-radius: 15px;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 25px;
     color: $white;
     box-shadow: rgb(0 0 0 / 25%) 0px 1px 2px;
+
   }
 
   .date-and-time span {
@@ -98,7 +99,7 @@ export default {
     align-items: center;
 
     .city-container {
-      width: 80%;
+      width: 77%;
     }
   }
 }
