@@ -26,7 +26,7 @@ export default {
   name: "LeftContainer",
   data() {
     return {
-      icons
+      icons,
     };
   },
   computed: {

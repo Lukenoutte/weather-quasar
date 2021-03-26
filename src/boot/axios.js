@@ -1,7 +1,6 @@
-import Vue from 'vue'
-import axios from 'axios'
+import Vue from "vue";
+import axios from "axios";
 
-Vue.prototype.$axios = axios
-const api = axios.create({ baseURL: 'https://api.hgbrasil.com/weather?format=json-cors' });
+Vue.prototype.$axios = axios;
 
-export { axios, api }
+export { axios };
