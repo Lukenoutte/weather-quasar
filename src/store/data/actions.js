@@ -16,7 +16,7 @@ export function getData({ commit }, city) {
       commit("SET_WEATHER_DATA", response.data.results);
     })
     .catch(err => {
-      if (err.response.status != 200) {
+      if (err) {
         this.$router.push({ path: '/404' })
       }
     });
