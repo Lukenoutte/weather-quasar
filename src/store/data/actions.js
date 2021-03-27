@@ -1,15 +1,16 @@
 import { axios } from "../../boot/axios";
 
 export function getData({ commit }, city) {
-  let key = "33d917e3";
+  let key = "2c263fac";
 
-  let url = "https://api.hgbrasil.com/weather?format=json-cors&key=" + key;
+  let url = "https://api.hgbrasil.com/weather/?format=json-cors&key=" + key;
 
   if (city) {
     url = url + "&city_name=" + city;
   }
 
-  axios({ baseURL: url })
+  axios
+    .get(url)
     .then(response => {
       commit("SET_WEATHER_DATA", response.data.results);
     })
