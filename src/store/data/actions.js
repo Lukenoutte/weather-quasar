@@ -10,7 +10,7 @@ export function getData({ commit }, city) {
   }else{
     url = "https://api.hgbrasil.com/weather?format=json-cors";
   }
-
+  
   axios({ baseURL: url })
     .then(response => {
       commit("SET_WEATHER_DATA", response.data.results);
