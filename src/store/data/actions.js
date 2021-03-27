@@ -10,10 +10,6 @@ export function getData({ commit }, city) {
   }else{
     url = "https://api.hgbrasil.com/weather?format=json-cors";
   }
-  
-  axios.defaults.headers = {
-    "Access-Control-Allow-Origin": "https://weather-quasar.netlify.app",
-  };
 
   axios({ baseURL: url })
     .then(response => {
