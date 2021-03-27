@@ -8,6 +8,10 @@ export function getData({ commit }, city) {
   if (city) {
     url = url + "&city_name=" + city;
   }
+  
+  axios.defaults.headers = {
+    "Access-Control-Allow-Origin": "https://weather-quasar.netlify.app",
+  };
 
   axios({ baseURL: url })
     .then(response => {
