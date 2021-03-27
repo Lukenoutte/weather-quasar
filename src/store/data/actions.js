@@ -8,7 +8,7 @@ export function getData({ commit }, city) {
   if (city) {
     url = url + "&city_name=" + city;
   }
-  
+
   axios({ baseURL: url })
     .then(response => {
       commit("SET_WEATHER_DATA", response.data.results);
