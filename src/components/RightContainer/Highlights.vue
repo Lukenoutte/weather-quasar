@@ -1,16 +1,16 @@
 <template>
   <div class="flex row justify-between">
-    <div class="high-light">
+    <div class="highlight">
       <span>Humidade</span>
       <p class="data-p">{{ humidity }}%</p>
-      <img class="icon" :src="icons['humidity']" />
+      <q-icon class="icon" :name="'img:' + icons['humidity']" />
     </div>
-    <div class="high-light">
+    <div class="highlight">
       <span>Velocidade do vento</span>
       <p class="data-p">{{ windySpeedy }}</p>
-      <img class="icon" :src="icons['wind']" />
+      <q-icon class="icon" :name="'img:' + icons['wind']" />
     </div>
-    <div class="high-light sun-container">
+    <div class="highlight sun-container">
       <span>Sol</span>
       <p>
         Nascer do sol: <strong>{{ sun.sunrise }}</strong>
@@ -18,7 +18,7 @@
       <p>
         Pôr do sol: <strong>{{ sun.sunset }}</strong>
       </p>
-      <img class="icon" :src="icons['sun']" />
+      <q-icon class="icon" :name="'img:' + icons['sun']" />
     </div>
   </div>
 </template>
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.high-light {
+.highlight {
   width: 32%;
   background: $white;
   border-radius: 15px;
@@ -70,7 +70,7 @@ export default {
     margin-bottom: 5px;
   }
   .icon {
-    height: 70px;
+    font-size: 70px;
   }
   .data-p {
     font-size: 30px;
@@ -89,7 +89,7 @@ export default {
 }
 
 @media only screen and (max-width: 1100px) {
-  .high-light {
+  .highlight {
     width: 100%;
     margin-top: 10px;
   }

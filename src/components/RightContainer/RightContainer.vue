@@ -39,7 +39,6 @@ export default {
   background-color: $background-grey;
 }
 .right-container {
-  padding: 1% 3%;
   width: 90%;
 
   .title {

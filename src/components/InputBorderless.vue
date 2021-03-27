@@ -36,4 +36,10 @@ export default {
 .search-input {
   width: 100%;
 }
+
+@media only screen and (max-width: 1100px) {
+  .search-input {
+  width: 95%;
+}
+}
 </style>

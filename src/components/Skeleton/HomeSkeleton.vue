@@ -4,7 +4,7 @@
       <div class="flex left-container">
         <input-borderless />
         <div
-          class=" flex self-center content-skeleton icon-skeleton"
+          class="content-skeleton icon-skeleton"
           style="  height: 180px;  width: 200px;"
         />
         <div

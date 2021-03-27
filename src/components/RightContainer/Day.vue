@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-sm flex column items-center justify-center day">
     <strong>{{ day.weekday }}</strong>
-    <img class="q-my-sm day-icon" :src="icons[day.condition]" />
+    <q-icon class="q-my-sm day-icon" :name="'img:' + icons[day.condition]" />
     <span> <strong>Max:</strong> {{ day.max }}°c</span>
     <span><strong>Min:</strong> {{ day.min }}°c</span>
   </div>
@@ -24,8 +24,9 @@ export default {
 
 <style lang="scss" scoped>
 .day-icon {
-  height: 50px;
+  font-size: 50px;
 }
+
 .day {
   background-color: $white;
   border-radius: 15px;

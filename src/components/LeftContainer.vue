@@ -2,7 +2,7 @@
   <div class="to-centrilize-left">
     <div class="left-container">
       <input-borderless />
-      <img class="icon-temperature" :src="icons[condition]" />
+      <q-icon class="icon-temperature" :name="'img:' + icons[condition]" />
       <p class="temperature no-margin">{{ temperature }}ºc</p>
 
       <div class="date-and-time">
@@ -21,7 +21,6 @@
 import { mapGetters } from "vuex";
 import { icons } from "../helpers";
 import InputBorderless from "./InputBorderless";
-
 export default {
   name: "LeftContainer",
   data() {
@@ -48,18 +47,16 @@ export default {
 <style lang="scss">
 .to-centrilize-left {
   width: 30%;
-  height: 100vh;
-  min-height: 600px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .left-container {
-  width: 90%;
+  width: 75%;
   display: flex;
   flex-direction: column;
-  padding: 1% 3%;
   max-width: 900px;
 
   .temperature {
@@ -67,8 +64,9 @@ export default {
   }
 
   .icon-temperature {
-    height: 180px;
+    font-size: 180px;
   }
+
   .city-container {
     height: 100px;
     width: 100%;
@@ -78,7 +76,6 @@ export default {
     font-size: 25px;
     color: $white;
     box-shadow: rgb(0 0 0 / 25%) 0px 1px 2px;
-
   }
 
   .date-and-time span {
@@ -97,10 +94,33 @@ export default {
 
   .left-container {
     align-items: center;
-
+    margin: 100px 0;
     .city-container {
-      width: 77%;
+      width: 95%;
     }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .left-container {
+    .icon-temperature {
+      font-size: 130px;
+    }
+
+    .temperature {
+      font-size: 50px;
+    }
+    .city-container {
+      font-size: 16px;
+    }
+    .date-and-time span {
+      font-size: 15px;
+    }
+  .city-container {
+    height: auto;
+    padding: 10px 0;
+  }
+    
   }
 }
 </style>
