@@ -3,7 +3,7 @@ import { axios } from "../../boot/axios";
 export function getData({ commit }, city) {
   let key = "2c263fac";
 
-  let url = "https://api.hgbrasil.com/weather/?format=json-cors&key=" + key;
+  let url = "https://api.hgbrasil.com/weather/?locale=pt&format=json-cors&key=" + key;
 
   if (city) {
     url = url + "&city_name=" + city;

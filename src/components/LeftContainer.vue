@@ -116,11 +116,10 @@ export default {
     .date-and-time span {
       font-size: 15px;
     }
-  .city-container {
-    height: auto;
-    padding: 10px 0;
-  }
-    
+    .city-container {
+      height: auto;
+      padding: 10px 0;
+    }
   }
 }
 </style>

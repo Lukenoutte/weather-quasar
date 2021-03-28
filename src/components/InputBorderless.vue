@@ -12,7 +12,11 @@
       <q-icon name="search" />
     </template>
     <template v-slot:append>
-      <q-icon name="arrow_forward" @click="getDataFromSearch" class="cursor-pointer" />
+      <q-icon
+        name="arrow_forward"
+        @click="getDataFromSearch"
+        class="cursor-pointer"
+      />
     </template>
   </q-input>
 </template>
@@ -26,7 +30,7 @@ export default {
   methods: {
     getDataFromSearch: function() {
       let city = this.searchText;
-      this.$store.dispatch("data/getData", city );
+      this.$store.dispatch("data/getData", city);
     }
   }
 };
@@ -38,8 +42,11 @@ export default {
 }
 
 @media only screen and (max-width: 1100px) {
+
   .search-input {
-  width: 95%;
-}
+    width: 75%;
+    position: absolute;
+    top: 50px;
+  }
 }
 </style>
