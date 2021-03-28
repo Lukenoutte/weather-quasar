@@ -1,7 +1,6 @@
 <template>
   <div class="to-centrilize-left">
     <div class="left-container">
-      
       <input-borderless
         v-on:clicked="getDataFromSearch"
         v-on:keyEnter="getDataFromSearch"
@@ -55,81 +54,59 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.to-centrilize-left {
-  width: 30%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.temperature {
+  font-size: 70px;
 }
 
-.left-container {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  max-width: 900px;
+.icon-temperature {
+  font-size: 180px;
+}
 
-  .temperature {
-    font-size: 70px;
-  }
+.city-container {
+  height: 100px;
+  width: 100%;
+  background: $primary;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 25px;
+  color: $white;
+  box-shadow: rgb(0 0 0 / 25%) 0px 1px 2px;
+}
 
-  .icon-temperature {
-    font-size: 180px;
-  }
-
-  .city-container {
-    height: 100px;
-    width: 100%;
-    background: $primary;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 25px;
-    color: $white;
-    box-shadow: rgb(0 0 0 / 25%) 0px 1px 2px;
-  }
-
-  .date-and-time span {
-    font-size: 21px;
-    font-weight: 400;
-  }
-  .date-and-time span:last-child {
-    color: $grey-title;
-  }
+.date-and-time span {
+  font-size: 21px;
+  font-weight: 400;
+}
+.date-and-time span:last-child {
+  color: $grey-title;
 }
 
 @media only screen and (max-width: 1100px) {
-  .to-centrilize-left {
-    width: 100%;
+  .city-container {
+    width: 95%;
   }
-
-  .left-container {
-    align-items: center;
-    margin: 100px 0;
-    .city-container {
-      width: 95%;
-    }
+  .icon-temperature {
+    margin-top: 30px;
   }
 }
 
 @media only screen and (max-width: 599px) {
-  .left-container {
-    .icon-temperature {
-      font-size: 130px;
-    }
+  .icon-temperature {
+    font-size: 130px;
+  }
 
-    .temperature {
-      font-size: 50px;
-    }
-    .city-container {
-      font-size: 16px;
-    }
-    .date-and-time span {
-      font-size: 15px;
-    }
-    .city-container {
-      height: auto;
-      padding: 10px 0;
-    }
+  .temperature {
+    font-size: 50px;
+  }
+  .city-container {
+    font-size: 16px;
+  }
+  .date-and-time span {
+    font-size: 15px;
+  }
+  .city-container {
+    height: auto;
+    padding: 10px 0;
   }
 }
 </style>

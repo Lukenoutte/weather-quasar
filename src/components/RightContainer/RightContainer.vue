@@ -29,41 +29,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.to-centrilize-right {
-  width: 70%;
-  height: 100vh;
-  min-height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $background-grey;
-}
-.right-container {
-  width: 90%;
-
-  .title {
-    font-weight: 600;
-    font-size: 18px;
-  }
+.title {
+  font-weight: 600;
+  font-size: 18px;
 }
 
 @media only screen and (max-width: 1100px) {
-  .to-centrilize-right{
-    width: 100%;
-    height: auto;
+  .week div:not(:first-child) {
+    margin-top: 10px;
   }
-
-  .right-container {
-    width: 70%;
-    height: auto;
-    padding-bottom: 100px;
-
-    .week div:not(:first-child) {
-      margin-top: 10px;
-    }
-    .week {
-      max-width: auto;
-    }
+  .week {
+    max-width: auto;
   }
 }
 </style>

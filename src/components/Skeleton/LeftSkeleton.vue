@@ -21,21 +21,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.to-centrilize-left {
-  width: 30%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left-container {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  max-width: 900px;
-}
-
 .icon-skeleton {
   height: 180px;
   width: 200px;
@@ -75,16 +60,8 @@ export default {
     width: 80%;
   }
 
-  .to-centrilize-left {
-    width: 100%;
-  }
-
-  .left-container {
-    align-items: center;
-    margin: 100px 0;
-    .city-container {
-      width: 95%;
-    }
+  .city-container {
+    width: 95%;
   }
 }
 
