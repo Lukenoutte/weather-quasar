@@ -1,7 +1,12 @@
 <template>
   <div class="to-centrilize-left">
     <div class="left-container">
-      <input-borderless />
+      
+      <input-borderless
+        v-on:clicked="getDataFromSearch"
+        v-on:keyEnter="getDataFromSearch"
+      />
+
       <q-icon class="icon-temperature" :name="'img:' + icons[condition]" />
       <p class="temperature no-margin">{{ temperature }}ºc</p>
 
@@ -40,6 +45,11 @@ export default {
   },
   components: {
     InputBorderless
+  },
+  methods: {
+    getDataFromSearch: function(city) {
+      this.$store.dispatch("data/getData", city);
+    }
   }
 };
 </script>

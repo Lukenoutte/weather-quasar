@@ -6,7 +6,7 @@
     class="search-input"
     label="Procurar outra cidade..."
     v-model="searchText"
-    v-on:keyup.enter="getDataFromSearch"
+    v-on:keyup.enter="$emit('keyEnter', searchText)"
   >
     <template v-slot:prepend>
       <q-icon name="search" />
@@ -14,7 +14,7 @@
     <template v-slot:append>
       <q-icon
         name="arrow_forward"
-        @click="getDataFromSearch"
+        v-on:click="$emit('clicked', searchText)"
         class="cursor-pointer"
       />
     </template>
@@ -27,12 +27,6 @@ export default {
   data() {
     return { searchText: "" };
   },
-  methods: {
-    getDataFromSearch: function() {
-      let city = this.searchText;
-      this.$store.dispatch("data/getData", city);
-    }
-  }
 };
 </script>
 
