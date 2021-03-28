@@ -1,8 +1,10 @@
 ## 🎯 Sobre
 
-Site, App e aplicativo Desktop de previsão do tempo.
+Web, Mobile ou Desktop App de previsão do tempo.
 
 💻 [Site demo](https://weather-lukenoutte.netlify.app/)
+
+API: [HGBrasil](https://hgbrasil.com/)
 
 ## 🚀 Tecnologias
 
