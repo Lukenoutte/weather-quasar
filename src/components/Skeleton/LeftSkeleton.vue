@@ -21,6 +21,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.to-centrilize-left {
+  width: 30%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+}
 
 .icon-skeleton {
   height: 180px;
@@ -44,12 +58,12 @@ export default {
   box-shadow: rgb(0 0 0 / 25%) 0px 1px 2px;
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1100px) {
   .icon-skeleton {
     height: 130px;
   }
   .temperature-skeleton {
-    height: 50px;
+    height: 80px;
   }
 
   .date-skeleton {
@@ -57,7 +71,38 @@ export default {
   }
 
   .city-skeleton {
-    height: 50px;
+    height: 100px;
+    width: 80%;
+  }
+
+  .to-centrilize-left {
+    width: 100%;
+  }
+
+  .left-container {
+    align-items: center;
+    margin: 100px 0;
+    .city-container {
+      width: 95%;
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .left-container {
+    .temperature-skeleton {
+      height: 50px;
+    }
+    .city-skeleton {
+      height: 16px;
+    }
+    .date-skeleton span {
+      font-size: 15px;
+    }
+
+    .city-skeleton {
+      height: 40px;
+    }
   }
 }
 </style>

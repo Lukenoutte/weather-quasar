@@ -54,7 +54,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .to-centrilize-left {
   width: 30%;
   min-height: 100vh;

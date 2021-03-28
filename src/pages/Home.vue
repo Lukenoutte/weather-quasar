@@ -13,14 +13,13 @@
 <script>
 import { mapGetters } from "vuex";
 import HomeSkeleton from "../components/Skeleton/HomeSkeleton";
-import LeftContainer from "../components/LeftContainer";
-import RightContainer from "../components/RightContainer/RightContainer";
+
 export default {
   name: "Home",
   components: {
     HomeSkeleton,
-    LeftContainer,
-    RightContainer
+    LeftContainer: () => import("../components/LeftContainer"),
+    RightContainer: () => import("../components/RightContainer/RightContainer")
   },
   computed: {
     ...mapGetters({

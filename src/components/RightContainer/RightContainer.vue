@@ -28,7 +28,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .to-centrilize-right {
   width: 70%;
   height: 100vh;
