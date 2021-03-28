@@ -1,26 +1,29 @@
-# Quasar App (weather-quasar)
+## 🎯 Sobre
 
-A Quasar Framework app
+Site, App e aplicativo Desktop de previsão do tempo.
 
-## Install the dependencies
+💻 [Site demo](https://weather-lukenoutte.netlify.app/)
+
+## 🚀 Tecnologias
+
+- VueJs
+- Vuex
+- Quasar
+
+## ✅ Requisitos
+
+Antes de iniciar, você precisa ter [Git](https://git-scm.com), [Node](https://nodejs.org/en/) e [Quasar](https://quasar.dev/) instalados.
+
+## 🔌 Iniciando o projeto
 ```bash
-yarn
+$ git clone https://github.com/Lukenoutte/weather-quasar.git
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+### 
 
-### Lint the files
 ```bash
-yarn run lint
+$ cd weather-quasar
+$ yarn install
+$ quasar dev
+# The server will initialize in the <http://localhost:8080>
 ```
-
-### Build the app for production
-```bash
-quasar build
-```
-
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
